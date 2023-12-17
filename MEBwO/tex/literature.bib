@@ -1,0 +1,612 @@
+@article{core-sets,
+author = {Kumar, Piyush and Mitchell, Joseph S. B. and Yildirim, E. Alper},
+title = {Approximate Minimum Enclosing Balls in High Dimensions Using Core-Sets},
+year = {2004},
+issue_date = {2003},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {8},
+issn = {1084-6654},
+url = {https://doi.org/10.1145/996546.996548},
+doi = {10.1145/996546.996548},
+abstract = {We study the minimum enclosing ball (MEB) problem for sets of points or balls in high
+dimensions. Using techniques of second-order cone programming and "core-sets", we
+have developed (1 + ε)-approximation algorithms that perform well in practice, especially
+for very high dimensions, in addition to having provable guarantees. We prove the
+existence of core-sets of size O(1/ε), improving the previous bound of O(1/ε2), and
+we study empirically how the core-set size grows with dimension. We show that our
+algorithm, which is simple to implement, results in fast computation of nearly optimal
+solutions for point sets in much higher dimension than previously computable using
+exact techniques.},
+journal = {ACM J. Exp. Algorithmics},
+month = dec,
+pages = {1.1–es},
+numpages = {29},
+keywords = {minimum enclosing ball, second-order cone programming, approximation algorithms}
+}
+
+@article{two-algorithms,
+author = {Yildirim, E. Alper},
+title = {Two Algorithms for the Minimum Enclosing Ball Problem},
+year = {2008},
+issue_date = {October 2008},
+publisher = {Society for Industrial and Applied Mathematics},
+address = {USA},
+volume = {19},
+number = {3},
+issn = {1052-6234},
+url = {https://doi.org/10.1137/070690419},
+doi = {10.1137/070690419},
+abstract = {Given ${cal A} := {a^1,dots,a^m} subset mathbb{R}^n$ and $epsilon > 0$, we
+propose and analyze two algorithms for the problem of computing a $(1 + epsilon)$-approximation
+to the radius of the minimum enclosing ball of ${cal A}$. The first algorithm is
+closely related to the Frank-Wolfe algorithm with a proper initialization applied
+to the dual formulation of the minimum enclosing ball problem. We establish that this
+algorithm converges in $O(1/epsilon)$ iterations with an overall complexity bound
+of $O(mn/epsilon)$ arithmetic operations. In addition, the algorithm returns a “core
+set” of size $O(1/epsilon)$, which is independent of both $m$ and $n$. The latter
+algorithm is obtained by incorporating “away” steps into the former one at each iteration
+and achieves the same asymptotic complexity bound as the first one. While the asymptotic
+bound on the size of the core set returned by the second algorithm also remains the
+same as the first one, the latter algorithm has the potential to compute even smaller
+core sets in practice, since, in contrast to the former one, it allows “dropping”
+points from the working core set at each iteration. Our analysis reveals that the
+leading terms in the asymptotic complexity analysis are reasonably small. In contrast
+to the first algorithm, we also establish that the second algorithm asymptotically
+exhibits linear convergence, which provides further insight into our computational
+results, indicating that the latter algorithm indeed terminates faster with smaller
+core sets in comparison with the first one. We also discuss how our algorithms can
+be extended to compute an approximation to the minimum enclosing ball of more general
+input sets without sacrificing the iteration complexity and the bound on the core
+set size. In particular, we establish the existence of a core set of size $O(1/epsilon)$
+for a much wider class of input sets. We adopt the real number model of computation
+in our analysis.},
+journal = {SIAM J. on Optimization},
+month = nov,
+pages = {1368–1391},
+numpages = {24},
+keywords = {approximation algorithms, minimum enclosing balls, core sets}
+}
+
+@article{bnb,
+ ISSN = {00129682, 14680262},
+ URL = {http://www.jstor.org/stable/1910129},
+ abstract = {In the classical linear programming problem the behaviour of continuous, nonnegative variables subject to a system of linear inequalities is investigated. One possible generalization of this problem is to relax the continuity condition the variables. This paper presents a simple numerical algorithm for the solution of programming problems in which some or all of the variables can take only discrete values. The algorithm requires no special techniques beyond these used in ordinary linear programming, and lends itself to automatic computing. Its use is illustrated on two numerical examples.},
+ author = {A. H. Land and A. G. Doig},
+ journal = {Econometrica},
+ number = {3},
+ pages = {497--520},
+ publisher = {[Wiley, Econometric Society]},
+ title = {An Automatic Method of Solving Discrete Programming Problems},
+ volume = {28},
+ year = {1960}
+}
+
+@misc{gurobi,
+  author = {{Gurobi Optimization, LLC}},
+  title = {{Gurobi Optimizer Reference Manual}},
+  year = 2021,
+  url = "https://www.gurobi.com"
+}
+
+@book{python,
+ author = {Van Rossum, Guido and Drake, Fred L.},
+ title = {Python 3 Reference Manual},
+ year = {2009},
+ isbn = {1441412697},
+ publisher = {CreateSpace},
+ address = {Scotts Valley, CA}
+}
+
+@Article{numpy,
+ title         = {Array programming with {NumPy}},
+ author        = {Charles R. Harris and K. Jarrod Millman and St{\'{e}}fan J.
+                 van der Walt and Ralf Gommers and Pauli Virtanen and David
+                 Cournapeau and Eric Wieser and Julian Taylor and Sebastian
+                 Berg and Nathaniel J. Smith and Robert Kern and Matti Picus
+                 and Stephan Hoyer and Marten H. van Kerkwijk and Matthew
+                 Brett and Allan Haldane and Jaime Fern{\'{a}}ndez del
+                 R{\'{i}}o and Mark Wiebe and Pearu Peterson and Pierre
+                 G{\'{e}}rard-Marchant and Kevin Sheppard and Tyler Reddy and
+                 Warren Weckesser and Hameer Abbasi and Christoph Gohlke and
+                 Travis E. Oliphant},
+ year          = {2020},
+ month         = sep,
+ journal       = {Nature},
+ volume        = {585},
+ number        = {7825},
+ pages         = {357--362},
+ doi           = {10.1038/s41586-020-2649-2},
+ publisher     = {Springer Science and Business Media {LLC}},
+ url           = {https://doi.org/10.1038/s41586-020-2649-2}
+}
+
+@misc{pandasjeff_reback_2021_5060318,
+  author       = {Jeff Reback and
+                  jbrockmendel and
+                  Wes McKinney and
+                  Joris Van den Bossche and
+                  Tom Augspurger and
+                  Phillip Cloud and
+                  Simon Hawkins and
+                  gfyoung and
+                  Sinhrks and
+                  Matthew Roeschke and
+                  Adam Klein and
+                  Terji Petersen and
+                  Jeff Tratner and
+                  Chang She and
+                  William Ayd and
+                  Patrick Hoefler and
+                  Shahar Naveh and
+                  Marc Garcia and
+                  Jeremy Schendel and
+                  Andy Hayden and
+                  Daniel Saxton and
+                  Marco Edward Gorelli and
+                  Richard Shadrach and
+                  Vytautas Jancauskas and
+                  Ali McMaster and
+                  Fangchen Li and
+                  Pietro Battiston and
+                  Skipper Seabold and
+                  attack68 and
+                  Kaiqi Dong},
+  title        = {pandas-dev/pandas: Pandas 1.3.0},
+  month        = jul,
+  year         = 2021,
+  publisher    = {Zenodo},
+  version      = {v1.3.0},
+  doi          = {10.5281/zenodo.5060318},
+  url          = {https://doi.org/10.5281/zenodo.5060318}
+}
+
+@InProceedings{pandasmckinney-proc-scipy-2010,
+  author    = { {W}es {M}c{K}inney },
+  title     = { {D}ata {S}tructures for {S}tatistical {C}omputing in {P}ython },
+  booktitle = { {P}roceedings of the 9th {P}ython in {S}cience {C}onference },
+  pages     = { 56 - 61 },
+  year      = { 2010 },
+  editor    = { {S}t\'efan van der {W}alt and {J}arrod {M}illman },
+  doi       = { 10.25080/Majora-92bf1922-00a }
+}
+
+@Article{matplotlib,
+  Author    = {Hunter, J. D.},
+  Title     = {Matplotlib: A 2D graphics environment},
+  Journal   = {Computing in Science \& Engineering},
+  Volume    = {9},
+  Number    = {3},
+  Pages     = {90--95},
+  abstract  = {Matplotlib is a 2D graphics package used for Python for
+  application development, interactive scripting, and publication-quality
+  image generation across user interfaces and operating systems.},
+  publisher = {IEEE COMPUTER SOC},
+  doi       = {10.1109/MCSE.2007.55},
+  year      = 2007
+}
+
+@article{seaborn,
+  doi = {10.21105/joss.03021},
+  url = {https://doi.org/10.21105/joss.03021},
+  year = {2021},
+  publisher = {The Open Journal},
+  volume = {6},
+  number = {60},
+  pages = {3021},
+  author = {Michael L. Waskom},
+  title = {seaborn: statistical data visualization},
+  journal = {Journal of Open Source Software}
+}
+
+@misc{TFDS,
+  title = { {TensorFlow Datasets}, A collection of ready-to-use datasets},
+  howpublished = {\url{https://www.tensorflow.org/datasets} },
+  key = {TensorFlow}
+}
+
+@article{lecun2010mnist,
+  title={MNIST handwritten digit database},
+  author={LeCun, Yann and Cortes, Corinna and Burges, CJ},
+  journal={ATT Labs [Online]. Available: http://yann.lecun.com/exdb/mnist},
+  volume={2},
+  year={2010}
+}
+
+@inproceedings{badoiu,
+author = {Bundefineddoiu, Mihai and Har-Peled, Sariel and Indyk, Piotr},
+title = {Approximate Clustering via Core-Sets},
+year = {2002},
+isbn = {1581134959},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/509907.509947},
+doi = {10.1145/509907.509947},
+abstract = {In this paper, we show that for several clustering problems one can extract a small
+set of points, so that using those core-sets enable us to perform approximate clustering
+efficiently. The surprising property of those core-sets is that their size is independent
+of the dimension.Using those, we present a (1+ ε)-approximation algorithms for the
+k-center clustering and k-median clustering problems in Euclidean space. The running
+time of the new algorithms has linear or near linear dependency on the number of points
+and the dimension, and exponential dependency on 1/ε and k. As such, our results are
+a substantial improvement over what was previously known.We also present some other
+clustering results including (1+ ε)-approximate 1-cylinder clustering, and k-center
+clustering with outliers.},
+booktitle = {Proceedings of the Thiry-Fourth Annual ACM Symposium on Theory of Computing},
+pages = {250–257},
+numpages = {8},
+location = {Montreal, Quebec, Canada},
+series = {STOC '02}
+}
+
+@article{SHENMAIER201581,
+title = {Complexity and approximation of the Smallest k-Enclosing Ball problem},
+journal = {European Journal of Combinatorics},
+volume = {48},
+pages = {81-87},
+year = {2015},
+note = {Selected Papers of EuroComb’13},
+issn = {0195-6698},
+doi = {https://doi.org/10.1016/j.ejc.2015.02.011},
+url = {https://www.sciencedirect.com/science/article/pii/S0195669815000335},
+author = {Vladimir Shenmaier},
+abstract = {Given an n-point set in a d-dimensional space and an integer k, consider the problem of finding a smallest ball enclosing at least k of the points. In the case of a fixed dimension, the problem is polynomial-time solvable but in general, when d is not fixed, the complexity status is not known. We prove the strong NP-hardness in the case of Euclidean space and the (2−ε)-inapproximability in the case of L∞ metric. We also present a simple 2-approximation algorithm for any metric, and PTAS for L∞-space of dimension O(logn).}
+}
+
+@article{hoare1962quicksort,
+  title={Quicksort},
+  author={Hoare, Charles AR},
+  journal={The Computer Journal},
+  volume={5},
+  number={1},
+  pages={10--16},
+  year={1962},
+  publisher={Oxford University Press}
+}
+
+@article{socp_ipm,
+  title={On implementing a primal-dual interior-point method for conic quadratic optimization},
+  author={Andersen, Erling D and Roos, Cornelis and Terlaky, Tamas},
+  journal={Mathematical Programming},
+  volume={95},
+  number={2},
+  pages={249--277},
+  year={2003},
+  publisher={Springer}
+}
+
+@article{AGGARWAL199138,
+title = {Finding k points with minimum diameter and related problems},
+journal = {Journal of Algorithms},
+volume = {12},
+number = {1},
+pages = {38-56},
+year = {1991},
+issn = {0196-6774},
+doi = {https://doi.org/10.1016/0196-6774(91)90022-Q},
+url = {https://www.sciencedirect.com/science/article/pii/019667749190022Q},
+author = {Alok Aggarwal and Hiroshi Imai and Naoki Katoh and Subhash Suri},
+abstract = {Let S be a set consisting of n points in the plane. We consider the problem of finding k points of S that form a “small” set under some given measure, and present efficient algorithms for several natural measures including the diameter and the variance.}
+}
+
+@InProceedings{efrat,
+author="Efrat, Alon
+and Sharir, Micha
+and Ziv, Alon",
+editor="Dehne, Frank
+and Sack, J{\"o}rg-R{\"u}diger
+and Santoro, Nicola
+and Whitesides, Sue",
+title="Computing the smallest k-enclosing circle and related problems",
+booktitle="Algorithms and Data Structures",
+year="1993",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="325--336",
+abstract="We present an efficient algorithm for solving the ``smallest k-enclosing circle'' (kSC) problem: Given a set of n points in the plane and an integer k ≤ n, find the smallest disk containing k of the points. We resent several algorithms that run in O(nk logcn) time, where the constant c depends on the storage that the algorithm is allowed. When using O(nk) storage, the problem can be solved in time O(nk log2n). When only O(n log n) storage is allowed, the running time is O(nk log2n log n/k.). The method we describe can be easily extended to obtain efficient solutions of several related problems (with similar time and storage bounds). These related problems include: finding the smallest homothetic copy of a given convex polygon P, which contains k points from a given planar set, and finding the smallest hypodrome of a given length and orientation (formally defined in Section 4) containing k points from a given planar set.",
+isbn="978-3-540-47918-5"
+}
+
+@article{MATOUSEK1995217,
+title = {On enclosing k points by a circle},
+journal = {Information Processing Letters},
+volume = {53},
+number = {4},
+pages = {217-221},
+year = {1995},
+issn = {0020-0190},
+doi = {https://doi.org/10.1016/0020-0190(94)00190-A},
+url = {https://www.sciencedirect.com/science/article/pii/002001909400190A},
+author = {Jiří Matoušek},
+keywords = {Computational complexity, Computational geometry, Randomized algorithm, Parametric search, Clustering, Smallest enclosing circle},
+abstract = {We consider the problem of finding, for a given n-point set P in the plane and an integer k ⩽ n, a smallest circle enclosing at least k points of P. We present randomized algorithms with O(nk) space and O(n log n + nk) expected running time, resp. O(n) space and O(n log n + nk log k) time. This improves on previous results by logarithmic factors, and our algorithms are simpler and easier to implement.}
+}
+
+@article{megiddo,
+author = {Megiddo, Nimrod},
+title = {Linear-Time Algorithms for Linear Programming in $R^3$ and Related Problems},
+journal = {SIAM Journal on Computing},
+volume = {12},
+number = {4},
+pages = {759-776},
+year = {1983},
+doi = {10.1137/0212052},
+URL = {https://doi.org/10.1137/0212052}
+}
+
+@InProceedings{harpeled,
+author="Har-Peled, Sariel
+and Mazumdar, Soham",
+editor="Di Battista, Giuseppe
+and Zwick, Uri",
+title="Fast Algorithms for Computing the Smallest k-Enclosing Disc",
+booktitle="Algorithms - ESA 2003",
+year="2003",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="278--288",
+abstract="We consider the problem of finding, for a given n point set P in the plane and an integer k{\thinspace}≤{\thinspace}n, the smallest circle enclosing at least k points of P. We present a randomized algorithm that computes in O( nk ) expected time such a circle, improving over all previously known algorithms. Since this problem is believed to require $\Omega$(nk) time, we present a linear time $\delta$-approximation algorithm that outputs a circle that contains at least k points of P, and of radius less than (1 + $\delta$)ropt(P,K), where ropt(P,K) is the radius of the minimal disk containing at least k points of P. The expected running time of this approximation algorithm is {\$}O (n + n {\backslash}cdot {\{}{\backslash}rm min{\}}({\backslash}frac{\{}1{\}}{\{}k{\backslash}delta^3{\}}{\{}{\backslash}rm log^2{\}}{\backslash}frac{\{}1{\}}{\{}{\backslash}delta{\}},k)){\$}.",
+isbn="978-3-540-39658-1"
+}
+
+@article{cavaleiro,
+  title={A branch-and-bound algorithm for the minimum radius \$k\$-enclosing ball problem},
+  author={M. Cavaleiro and F. Alizadeh},
+  journal={ArXiv},
+  year={2017},
+  volume={abs/1707.03387}
+}
+
+@misc{huding,
+author = {Ding, Hu and Ye, Mingquan},
+year = {2018},
+month = apr,
+pages = {},
+title = {Solving Minimum Enclosing Ball with Outliers: Algorithm, Implementation, and Application},
+}
+
+@article{hyperspheresurface,
+author = {Muller, Mervin E.},
+title = {A Note on a Method for Generating Points Uniformly on <i>n</i>-Dimensional Spheres},
+year = {1959},
+issue_date = {April 1959},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {2},
+number = {4},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/377939.377946},
+doi = {10.1145/377939.377946},
+journal = {Commun. ACM},
+month = apr,
+pages = {19–20},
+numpages = {2}
+}
+
+@MISC {eldredge,
+    TITLE = {Picking random points in the volume of sphere with uniform probability},
+    AUTHOR = {Nate Eldredge (\url{https://math.stackexchange.com/users/822/nate-eldredge})}},
+    HOWPUBLISHED = {Mathematics Stack Exchange},
+    NOTE = {URL:\url{https://math.stackexchange.com/q/87238} (version: 2015-05-10) (Accessed 2021/08/04},
+    EPRINT = {https://math.stackexchange.com/q/87238},
+    URL = {https://math.stackexchange.com/q/87238}
+}
+
+@misc{curse,
+    title={Example A. Volume of a Hypersphere Inscribed in a Hypercube.},
+    author={MathWorks},
+    url={https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/53260/versions/3/previews/html/hypercontent.html},
+    note={Accessed 2021/08/04}
+}
+
+@misc{hypersphere,
+    author   = {Weisstein, Eric W.},
+    title    = {Hypersphere. {From MathWorld---A Wolfram Web Resource}},
+    url      = {\url{https://mathworld.wolfram.com/Hypersphere.html}},
+    note     = {Accessed 2021/08/04}
+}
+
+@misc{kernighan2006c,
+  title={The C programming language},
+  author={Kernighan, Brian W and Ritchie, Dennis M},
+  year={2006}
+}
+
+@article{scikit-learn,
+ title={Scikit-learn: Machine Learning in {P}ython},
+ author={Pedregosa, F. and Varoquaux, G. and Gramfort, A. and Michel, V.
+         and Thirion, B. and Grisel, O. and Blondel, M. and Prettenhofer, P.
+         and Weiss, R. and Dubourg, V. and Vanderplas, J. and Passos, A. and
+         Cournapeau, D. and Brucher, M. and Perrot, M. and Duchesnay, E.},
+ journal={Journal of Machine Learning Research},
+ volume={12},
+ pages={2825--2830},
+ year={2011}
+}
+
+@article{bezanson2017julia,
+  title={Julia: A fresh approach to numerical computing},
+  author={Bezanson, Jeff and Edelman, Alan and Karpinski, Stefan and Shah, Viral B},
+  journal={SIAM review},
+  volume={59},
+  number={1},
+  pages={65--98},
+  year={2017},
+  publisher={SIAM},
+  url={https://doi.org/10.1137/141000671}
+}
+
+@article{jump,
+author = {Iain Dunning and Joey Huchette and Miles Lubin},
+title = {JuMP: A Modeling Language for Mathematical Optimization},
+journal = {SIAM Review},
+volume = {59},
+number = {2},
+pages = {295-320},
+year = {2017},
+doi = {10.1137/15M1020575},
+}
+
+@article{lcg1,
+    author = {Thomson, W. E.},
+    title = "{A Modified Congruence Method of Generating Pseudo-random Numbers}",
+    journal = {The Computer Journal},
+    volume = {1},
+    number = {2},
+    pages = {83-83},
+    year = {1958},
+    month = {01},
+    issn = {0010-4620},
+    doi = {10.1093/comjnl/1.2.83},
+    url = {https://doi.org/10.1093/comjnl/1.2.83},
+    eprint = {https://academic.oup.com/comjnl/article-pdf/1/2/83/1175362/010083.pdf},
+}
+
+@article{lcg2,
+author = {Rotenberg, A.},
+title = {A New Pseudo-Random Number Generator},
+year = {1960},
+issue_date = {Jan. 1960},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {7},
+number = {1},
+issn = {0004-5411},
+url = {https://doi.org/10.1145/321008.321019},
+doi = {10.1145/321008.321019},
+abstract = {Although the multiplicative congruential method for generating pseudo-random numbers
+is widely used and has passed a number of tests of randomness [1, 2], attempts have
+been made to find an additive congruential method since it could be expected to be
+faster. Tests on a Fibonacci sequence [1] have shown it to be unsatisfactory. The
+sequence xi+1 = (2a + 1) xi + c (mod 235) (1) has been tested on the IBM 704. In appendix
+I it is shown that the sequence generates the full period of 235 numbers for a ≧ 2
+and c odd. Similar results obtain for decimal machines. Since multiplication by a
+power of the base can be accomplished by shifting, which is comparable in speed to
+addition, this scheme requires essentially three additions. It takes 14 machine cycles
+on the IBM 704, compared to 28 for the multiplicative method, so that the saving is
+168 μs/random number. The scheme has the further advantage that it does not destroy
+the multiplier-quotient register.Some tests have been made on the randomness of this
+sequence for a = 7 and c = 1, and a summary of the results is given in appendix II,
+where now the random numbers are considered to lie in the interval (0, 1).The serial
+correlation coefficient between one member of this sequence and the next is shown
+by Coveyou [3] to be approximately 0.8 per cent. By taking a = 9 this correlation
+coefficient can be reduced to approximately 0.2 per cent without increasing the time.
+Taking a = 21 would make this correlation very small but would require one more machine
+cycle on the IBM 704. Another way to reduce the correlation is to choose c such that
+the numerator in Coveyou's expression for the correlation coefficient is zero. This
+cannot be done exactly since it requires that c = (.5 ± √3/6)2P where P is the number
+of binary digits (excluding sign) in a machine word. However, a machine representation
+close to either of these numbers should be satisfactory. Some correlations with c
+= (.788+)235 and a = 7 were obtained and did not differ significantly from those given
+for c = 1 in the first section of appendix II.The author wishes to thank R. R. Coveyou
+for communicating his results in advance of publication and Elizabeth Wetherell for
+carrying out the calculations.},
+journal = {J. ACM},
+month = jan,
+pages = {75–77},
+numpages = {3}
+}
+
+@article{boxmuller,
+author = {G. E. P. Box and Mervin E. Muller},
+title = {{A Note on the Generation of Random Normal Deviates}},
+volume = {29},
+journal = {The Annals of Mathematical Statistics},
+number = {2},
+publisher = {Institute of Mathematical Statistics},
+pages = {610 -- 611},
+year = {1958},
+doi = {10.1214/aoms/1177706645},
+URL = {https://doi.org/10.1214/aoms/1177706645}
+}
+
+@misc{Holmes_Minimum_Enclosing_Balls_2021,
+author = {Holmes, Thomas},
+month = {8},
+title = {Minimum Enclosing Balls with Outliers},
+url = {https://github.com/tomholmes19/Minimum-Enclosing-Balls-with-Outliers},
+year = {2021}
+}
+
+@inproceedings{abod,
+author = {Kriegel, Hans-Peter and Schubert, Matthias and Zimek, Arthur},
+title = {Angle-Based Outlier Detection in High-Dimensional Data},
+year = {2008},
+isbn = {9781605581934},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1401890.1401946},
+doi = {10.1145/1401890.1401946},
+abstract = {Detecting outliers in a large set of data objects is a major data mining task aiming
+at finding different mechanisms responsible for different groups of objects in a data
+set. All existing approaches, however, are based on an assessment of distances (sometimes
+indirectly by assuming certain distributions) in the full-dimensional Euclidean data
+space. In high-dimensional data, these approaches are bound to deteriorate due to
+the notorious "curse of dimensionality". In this paper, we propose a novel approach
+named ABOD (Angle-Based Outlier Detection) and some variants assessing the variance
+in the angles between the difference vectors of a point to the other points. This
+way, the effects of the "curse of dimensionality" are alleviated compared to purely
+distance-based approaches. A main advantage of our new approach is that our method
+does not rely on any parameter selection influencing the quality of the achieved ranking.
+In a thorough experimental evaluation, we compare ABOD to the well-established distance-based
+method LOF for various artificial and a real world data set and show ABOD to perform
+especially well on high-dimensional data.},
+booktitle = {Proceedings of the 14th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+pages = {444–452},
+numpages = {9},
+keywords = {outlier detection, high-dimensional, angle-based},
+location = {Las Vegas, Nevada, USA},
+series = {KDD '08}
+}
+
+@inproceedings{ocsvm,
+author = {Sch\"{o}lkopf, Bernhard and Williamson, Robert and Smola, Alex and Shawe-Taylor, John and Platt, John},
+title = {Support Vector Method for Novelty Detection},
+year = {1999},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Suppose you are given some dataset drawn from an underlying probability distribution
+P and you want to estimate a "simple" subset S of input space such that the probability
+that a test point drawn from P lies outside of S equals some a priori specified ν
+between 0 and 1.We propose a method to approach this problem by trying to estimate
+a function f which is positive on S and negative on the complement. The functional
+form of f is given by a kernel expansion in terms of a potentially small subset of
+the training data; it is regularized by controlling the length of the weight vector
+in an associated feature space. We provide a theoretical analysis of the statistical
+performance of our algorithm.The algorithm is a natural extension of the support vector
+algorithm to the case of unlabelled data.},
+booktitle = {Proceedings of the 12th International Conference on Neural Information Processing Systems},
+pages = {582–588},
+numpages = {7},
+location = {Denver, CO},
+series = {NIPS'99}
+}
+
+@InProceedings{drae,
+author = {Xia, Yan and Cao, Xudong and Wen, Fang and Hua, Gang and Sun, Jian},
+title = {Learning Discriminative Reconstructions for Unsupervised Outlier Removal},
+booktitle = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
+month = {December},
+year = {2015}
+}
+
+@article{cortes1995support,
+  title={Support-vector networks},
+  author={Cortes, Corinna and Vapnik, Vladimir},
+  journal={Machine learning},
+  volume={20},
+  number={3},
+  pages={273--297},
+  year={1995},
+  publisher={Springer}
+}
+
+@article{Voronoi1908,
+author = {Voronoi, Georges},
+journal = {Journal für die reine und angewandte Mathematik},
+pages = {97-178},
+title = {Nouvelles applications des paramètres continus à la théorie des formes quadratiques. Premier mémoire. Sur quelques propriétés des formes quadratiques positives parfaites.},
+url = {http://eudml.org/doc/149276},
+volume = {133},
+year = {1908},
+}
