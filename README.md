@@ -1,7 +1,67 @@
-# 拜占庭分布式机器学习
-四川大学本科毕业设计《拜占庭分布式机器学习鲁棒性研究》实验源码
+# AAAI24: Near-Optimal Resilient Aggregation Rules for Distributed Learning Using 1-Center and 1-Mean Clustering with Outliers
 
-【摘要】
-    分布式机器学习在保持数据分散且私有的前提下，通过多个设备的协作完成大规模模型训练，已经得到广泛应用。在分布式机器学习中，各个客户端基于提前商定的学习模型和私有的本地数据进行本地模型训练，然后向中心服务器发送本地模型的参数梯度，服务器则对各客户端的梯度进行聚合，使用聚合结果更新全局模型。然而，分布式网络中的一些客户端可能出现通信故障或遭遇恶意攻击，从而向服务器发送错误的梯度，阻止全局模型收敛，这就是拜占庭问题。其中，发送错误梯度的客户端被称为拜占庭节点。为解决拜占庭问题，已有多种拜占庭鲁棒聚合算法被提出，这些算法基于网络中的拜占庭节点数量对客户端梯度进行弹性滤波，确保全局模型正常收敛。然而，现有方法所基于的假设各不相同，难以比较各聚合算法的鲁棒性。针对此问题，Farhadkhani, S等人提出了一个聚合算法的鲁棒性定量评估框架RESAM，该框架在基础假设下对多个聚合算法进行了收敛性证明和鲁棒性评估，是聚合算法鲁棒分析的重要理论成果。本文在对拜占庭分布式机器学习问题进行广泛调研的基础上，创新性地将带异常点的最小球算法（MEBwO）应用于拜占庭学习中，提出基于MEBwO和分布式动量的聚合算法MEBRA。并且，在理论上使用RESAM框架对MEBRA进行鲁棒性评估，在实践中通过大量仿真实验验证MEBRA在多种拜占庭攻击下的实用性。理论和实验结果表明，MEBRA算法在在高拜占庭比例时其鲁棒性优于其他经典聚合算法，而在低拜占庭比例下，MEBRA的表现也十分具有竞争力。
+This codebase is based on a fork of the [Leaf](leaf.cmu.edu) benchmark suite, [tRFA](https://github.com/krishnap25/tRFA), and MEBwO(https://github.com/tomholmes19/Minimum-Enclosing-Balls-with-Outliers), and provides scripts to reproduce the experimental results in the paper [Near-Optimal Resilient Aggregation Rules for Distributed 
+Learning Using 1-Center and 1-Mean Clustering with Outliers].
 
-【主题词】 分布式机器学习，拜占庭问题，鲁棒聚合
+If you use this code, please cite the paper using the bibtex reference below
+
+```
+place_holder
+```
+
+Abstract
+-----------------
+Byzantine machine learning has garnered considerable attention in light of the unpredictable faults that can occur in large-scale distributed learning systems. The key to secure resilience against Byzantine machines in distributed learning is resilient aggregation mechanisms. Although abundant resilient aggregation rules have been proposed, they are designed in ad-hoc manners, imposing extra barriers on comparing, analyzing, and improving the rules across performance criteria. This paper studies near-optimal aggregation rules using clustering in the presence of outliers. Our outlier-robust clustering approach utilizes geometric properties of the update vectors provided by workers. 
+
+Our analysis show that constant approximations to the 1-center and 1-mean clustering problems with outliers provide near-optimal resilient aggregators for metric-based criteria, which have been proven to be crucial in the homogeneous and heterogeneous cases respectively. In addition, we discuss two contradicting types of attacks under which no single aggregation rule is guaranteed to improve upon the naive average. Based on the discussion, we propose a two-phase resilient aggregation framework. 
+
+We run experiments for image classification using a non-convex loss function. The proposed algorithms outperform previously known aggregation rules by a large margin with both homogeneous and heterogeneous data distributions among non-faulty workers.
+
+The [accompanying paper](place_holder).
+
+
+Installation                                                                                                                   
+-----------------
+This code is written in Python 3.8
+and has been tested on PyTorch 1.4+.
+A conda environment file is provided in `rfa.yml` with all dependencies except PyTorch. 
+It can be installed by using [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)
+as follows
+
+```
+conda env create -f rfa.yml 
+```
+
+**Installing PyTorch:** Instructions to install a PyTorch compatible with the CUDA on your GPUs (or without GPUs) can be found [here](https://pytorch.org/get-started/locally/).
+
+
+Dataset
+-----------
+
+1. ### FEMNIST 
+
+  * **Overview:** Character Recognition Dataset
+  * **Original dataset:** 62 classes (10 digits, 26 lowercase, 26 uppercase), 3500 total users.(leaf.cmu.edu)
+  * **Preprocess:** We sample 5% of the images in the original dataset to construct our datasets. For the homogeneous setting, each client sample images from a uniform distribution over 62 classes.   We generate heterogeneous datasets for clients using categorical distributions qmdrawn from a Dirichlet distribution q ∼ Dir(αp), where p is a prior class distribution over 62 classes (Hsu, Qi, and Brown 2019). Each client sample from a categorical distribution characterized by an independent q . In our experiment for the heterogeneous setting, we let α = 0.1, which is described as the extreme heterogeneity setting in (Allouah et al. 2023a).
+  * **Task:** Image Classification
+  * **Directory:** ```data/femnist``` 
+
+2. ### CIFAR10
+
+  * **Overview:** Tiny Images Dataset
+  * **Original dataset:** 60000 32x32 colour images in 10 classes, with 6000 images per class.(https://www.cs.toronto.edu/~kriz/cifar.html)
+  * **Preprocess:** We use a small dataset of 35 clients uniformly sampled from the CIFAR-10 dataset, and each client contains 300 train samples and 60 test samples.
+  * **Task:** Image Classification
+  * **Directory:** ```data/cifar10``` 
+
+
+Reproducing Experiments in the Paper
+-------------------------------------
+
+As the data has been set up, the scripts provided in the folder ```models/scripts/``` can be used 
+to reproduce the experiments in the paper.
+
+Change directory to ```models``` and run the scripts as 
+```
+./scripts/femnist_cnn/run.sh  
+```
