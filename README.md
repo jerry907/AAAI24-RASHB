@@ -37,7 +37,8 @@ conda env create -f rfa.yml
 
 Dataset
 -----------
-
+Due to the large size of dataset, we ddi not upload dataset here, and the complete dataset is available at 
+https://drive.google.com/file/d/115Yf3yDkapxYZpzh43OCr4D4KX0S3GIG/view?usp=sharing.
 1. ### FEMNIST 
 
   * **Overview:** Character Recognition Dataset
