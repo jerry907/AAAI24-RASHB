@@ -6,7 +6,7 @@ Learning Using 1-Center and 1-Mean Clustering with Outliers].
 If you use this code, please cite the paper using the bibtex reference below
 
 ```
-Yi, Y., You, R., Liu, H. ., Liu, C., Wang, Y., & Lv, J. (2024). Near-Optimal Resilient Aggregation Rules for Distributed Learning Using 1-Center and 1-Mean Clustering with Outliers. Proceedings of the AAAI Conference on Artificial Intelligence, 38(15), 16469-16477. https://doi.org/10.1609/aaai.v38i15.29584
+Yi, Y., You, R., Liu, H. ., Liu, C., Wang, Y., & Lv, J. (2024). Near-Optimal Resilient Aggregation Rules for Distributed Learning Using 1-Center and 1-Mean Clustering with Outliers. Proceedings of the AAAI Conference on Artificial Intelligence, 38(15), 16469-16477. https://doi.org/10.1609/aaai.v38i15.29584.
 ```
 
 Abstract
@@ -38,7 +38,7 @@ conda env create -f rfa.yml
 Dataset
 -----------
 Due to the large size of dataset, we ddi not upload dataset here, and the complete dataset is available at 
-https://drive.google.com/file/d/115Yf3yDkapxYZpzh43OCr4D4KX0S3GIG/view?usp=sharing.
+https://drive.google.com/file/d/1_FopTqq_ZgVO7OkNBtCiw9SyTyGvU5m6/view?usp=drive_link.
 1. ### FEMNIST 
 
   * **Overview:** Character Recognition Dataset
