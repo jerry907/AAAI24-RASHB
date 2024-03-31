@@ -17,7 +17,7 @@ class ClientModel(Model):
         self.num_classes = num_classes
         self.device = torch.device('cpu') # TODO: set device throughout
         model = ConvNetModel().to(self.device)
-        optimizer = ErmOptimizer(model, m0=0, momcof=0)
+        optimizer = ErmOptimizer(model, momcof)
         super(ClientModel, self).__init__(lr, seed, max_batch_size,
                                           optimizer=optimizer)
 
@@ -76,7 +76,7 @@ class ConvNetModel(torch.nn.Module):
 
 class ErmOptimizer(Optimizer):
 
-    def __init__(self, model, m0=0, momcof=0):
+    def __init__(self, model, momcof=0):
         super(ErmOptimizer, self).__init__(torch_to_numpy(model.trainable_parameters()))
         self.optimizer_model = None
         self.learning_rate = None
@@ -133,8 +133,8 @@ class ErmOptimizer(Optimizer):
         for p, g in zip(self.model.trainable_parameters(), gradient):
             if p not in self.mom:
                 self.mom[p] = torch.zeros_like(p)
-            self.mom[p] = self.momcof * self.mom[p] - self.learning_rate * g.data
-            p.data += self.mom[p]
+            self.mom[p] = self.momcof * self.mom[p] + (1-self.momcof) * g.data
+            p.data -= self.learning_rate * self.mom[p]
 
         return loss.item()
 
