@@ -6,7 +6,7 @@ Learning Using 1-Center and 1-Mean Clustering with Outliers].
 If you use this code, please cite the paper using the bibtex reference below
 
 ```
-place_holder
+Yi, Y., You, R., Liu, H. ., Liu, C., Wang, Y., & Lv, J. (2024). Near-Optimal Resilient Aggregation Rules for Distributed Learning Using 1-Center and 1-Mean Clustering with Outliers. Proceedings of the AAAI Conference on Artificial Intelligence, 38(15), 16469-16477. https://doi.org/10.1609/aaai.v38i15.29584
 ```
 
 Abstract
